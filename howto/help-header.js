@@ -3115,10 +3115,10 @@ SPDX-License-Identifier: Apache-2.0
           ${G`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11L12 4l8.5 7" /><path d="M5.5 9.5V20h5v-5.5h3V20h5V9.5" /></svg>`}
         </a>`:$,s=[...t!=="app"&&!al?["app"]:[],...cw[t]??[]];return v`${r}${n.afterHome??$}${s.filter(o=>o!==t).map(o=>v`<a class="m-help m-place ${o}" href=${ir(o,t,e)} title=${Ga[o]} aria-label=${Ga[o]}>
         ${o==="app"?G`<svg viewBox="24 10 52 78" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">${wh}</g></svg>`:G`<svg viewBox="0 0 24 24" aria-hidden="true">${bh[o]}</svg>`}
-      </a>`)}`}const dw=parseFloat("0.118+")<1;function uw(t){return v`<hero-version-line .tip=${t}></hero-version-line>`}const ja={en:{word:"Offline",title:"No internet connection: signing in, saving and the choir’s recordings wait until you are back online."},de:{word:"Offline",title:"Keine Internetverbindung: Anmelden, Speichern und die Aufnahmen warten, bis du wieder online bist."}},pw=G`<path d="M7 18h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.1 4.5 4.5 0 0 0 7 18z" /><path d="M4 4l16 16" />`;class kh extends ke{constructor(){super(...arguments),this.tip="",this.offline=!navigator.onLine,this.changed=()=>this.offline=!navigator.onLine}createRenderRoot(){return this}connectedCallback(){super.connectedCallback(),this.changed(),window.addEventListener("online",this.changed),window.addEventListener("offline",this.changed)}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("online",this.changed),window.removeEventListener("offline",this.changed)}render(){if(this.offline){const e=de()==="de"?ja.de:ja.en;return v`<span class="m-version-line m-offline" role="status" title=${e.title}>
+      </a>`)}`}const dw=parseFloat("0.119+")<1;function uw(t){return v`<hero-version-line .tip=${t}></hero-version-line>`}const ja={en:{word:"Offline",title:"No internet connection: signing in, saving and the choir’s recordings wait until you are back online."},de:{word:"Offline",title:"Keine Internetverbindung: Anmelden, Speichern und die Aufnahmen warten, bis du wieder online bist."}},pw=G`<path d="M7 18h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.1 4.5 4.5 0 0 0 7 18z" /><path d="M4 4l16 16" />`;class kh extends ke{constructor(){super(...arguments),this.tip="",this.offline=!navigator.onLine,this.changed=()=>this.offline=!navigator.onLine}createRenderRoot(){return this}connectedCallback(){super.connectedCallback(),this.changed(),window.addEventListener("online",this.changed),window.addEventListener("offline",this.changed)}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("online",this.changed),window.removeEventListener("offline",this.changed)}render(){if(this.offline){const e=de()==="de"?ja.de:ja.en;return v`<span class="m-version-line m-offline" role="status" title=${e.title}>
         <svg viewBox="0 0 24 24" aria-hidden="true">${pw}</svg>${e.word}
       </span>`}return v`<span class="m-version-line">
-      <span class="m-version" title=${this.tip}>v${"0.118+"}</span>
+      <span class="m-version" title=${this.tip}>v${"0.119+"}</span>
       ${dw?v`<span class="m-beta">Beta</span>`:""}
     </span>`}}kh.properties={tip:{},offline:{state:!0}};customElements.get("hero-version-line")||customElements.define("hero-version-line",kh);const fw=Ve`
     /* The round keys (help, home, the places): header-key.ts, the one look of every header key */
@@ -3175,7 +3175,7 @@ SPDX-License-Identifier: Apache-2.0
         height: 32px;
       }
     }
-    /* The name with the build's version ("0.118+") under it, left aligned; cut where the keys need the room */
+    /* The name with the build's version ("0.119+") under it, left aligned; cut where the keys need the room */
     .m-titles {
       display: flex;
       flex-direction: column;
@@ -4034,7 +4034,7 @@ SPDX-License-Identifier: Apache-2.0
           <span class="m-titles">
             <!-- The app's name as it is, the help's in the theme colour -->
             <span class="m-name">${Qe().app.name} <span class="accent">${t}</span></span>
-            ${uw(q().versionTitle("0.118+","3447b9b · a3f027e"))}
+            ${uw(q().versionTitle("0.119+","c8a1812 · 980fc71"))}
           </span>
         </a>
         <div class="m-header-end">
